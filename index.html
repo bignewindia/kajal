@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kajal - BSc Nursing Exam</title>
+    <style>
+        /* CSS for the Exam Interface */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .header {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3f51b5; /* A shade of blue */
+        }
+        .exam-info {
+            font-size: 14px;
+            color: #555;
+            text-align: right;
+        }
+        .exam-header {
+            background-color: #f9f9f9;
+            padding: 10px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .question-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .question-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .question-text {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .options label {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .options label:hover {
+            background-color: #f0f0f0;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .nav-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        #submit-exam-button {
+            background-color: #3f51b5; /* Blue for Submit Exam */
+            color: white;
+            margin-left: 10px;
+        }
+        #mark-review {
+            background-color: #ff9800; /* Orange for Mark for Review */
+            color: white;
+        }
+        .instruction-container, .result-container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .instruction-container h2 {
+            color: #3f51b5;
+        }
+        .instruction-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .instruction-list li {
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .declaration {
+            margin-top: 30px;
+        }
+        #begin-exam {
+            padding: 12px 25px;
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #result-display {
+            display: none;
+            text-align: center;
+        }
+        #result-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .score-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .score-value {
+            font-weight: bold;
+        }
+        .score-value.true { color: blue; }
+        .score-value.false { color: red;
